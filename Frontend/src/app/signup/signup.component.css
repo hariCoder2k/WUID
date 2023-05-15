@@ -1,0 +1,58 @@
+@import url('src/app/navstyle.css');
+
+
+.login-container{
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+    background: white;
+    max-width: 350px;
+    margin:  120px auto 120px;
+    padding: 10px 45px 30px 45px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+form h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form p{
+    font-size: 15px;
+    text-align: center;
+}
+form a{
+    text-decoration: none;
+    color: #1ae583;
+}
+
+form input{
+    border-radius: 10px;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+form .button{
+    text-transform: uppercase;
+    background: #13c82b;
+    width: 100%;    
+    border: 0;
+    padding: 15px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer; 
+}
+html
+{
+ margin:0px;
+ height:100%;
+ width:100%;
+ -webkit-background-size:cover;
+ -o-background-size:cover;
+ -moz-background-size:cover;
+ background-size:cover;
+}

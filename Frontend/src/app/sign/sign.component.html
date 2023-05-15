@@ -1,0 +1,57 @@
+<header>
+    <div class="logo"><a href="#">FarmBuy</a></div>
+    <div class="heading">
+        <ul>
+            <li><a href="#" class="under">HOME</a></li>
+            <li><a href="#" class="under">PRODUCTS</a></li>
+            <li><a href="#" class="under">CONTACT US</a></li>
+            <li><a href="#" class="under">ABOUT US</a></li>
+        </ul>
+    </div>
+</header>
+<div class="main">
+    <section class="sign-in">
+        <div class="container">
+            <div class="signin-content">
+                <div class="signin-form">
+                    <h2 class="form-title" >Sign Up</h2>
+                    <form #signupForm="ngForm" class="register-form" id="login-form" (ngSubmit)="signup(signupForm.value)">
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-email"></i></label>
+                            <input type="text" name="name" [(ngModel)]="user.oname" id="name" placeholder="Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="username"><i class="zmdi zmdi-email"></i></label>
+                            <input type="text" name="oname" id="username" placeholder="User Name"  [(ngModel)]="user.name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="pass" id="password" placeholder="Password"  [(ngModel)]="user.pass"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm_pass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="confirm_pass" id="confirm_pass" placeholder="Confirm Password" [(ngModel)]="cpass"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="street"><i class="zmdi zmdi-email"></i></label>
+                            <input type="text" name="street" id="street" placeholder="Street"  [(ngModel)]="user.street"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="city"><i class="zmdi zmdi-email"></i></label>
+                            <input type="text" name="city" id="city" placeholder="City"  [(ngModel)]="user.city"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode"><i class="zmdi zmdi-email"></i></label>
+                            <input type="number" max="999999" min="600001" name="pincode" id="pincode" placeholder="Pincode"  [(ngModel)]="user.zip"/>
+                        </div>
+                        <p style="color: red;">{{statements}}</p>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="REGISTER"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

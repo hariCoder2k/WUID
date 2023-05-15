@@ -1,0 +1,17 @@
+<header>
+    <div class="logo"><a href="#">FarmBuy</a></div>
+    
+    <div class="heading">
+        <ul>
+            <li><a routerLink="/home" class="under">HOME</a></li>
+            <li><a routerLink="/listorders" class="under">ORDERS</a></li>
+            <li><a routerLink="/about" class="under">ABOUT US</a></li>
+            <li><button class="btn btn-primary o" routerLink="/cart" >Cart</button></li>
+            <li>Total {{totalItems}}</li>
+            &nbsp;
+            &nbsp;
+            <li class="o">{{username}}</li>
+            <button class="btn btn-danger o" routerLink="" (click)="logout()">Logout</button>
+        </ul>
+    </div>
+</header>

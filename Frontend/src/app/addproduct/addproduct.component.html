@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> AGRICULTURAL PRODUCTS </title>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <span class="logo_name">FARMBUY</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a routerLink="/adminconsole">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a  routerLink="/adminstocks"  >
+            <i class='bx bx-box' ></i>
+            <span class="links_name" routerLink="/adminstocks">Product</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/allpayment">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name" routerLink="">All Payments</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/addproduct" class="active">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name">Add Product</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a routerLink="/alogin">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <!-- <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search' ></i>
+      </div> -->
+      <div class="profile-details">
+        <span class="admin_name"><strong>admin</strong></span>
+      </div>
+    </nav>
+<div class="home-content">
+  <div class="main">
+
+    <!-- Sign up form -->
+    <section class="fund">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Add Product</h2>
+                    <form class="register-form" id="register-form" #productForm="ngForm" (ngSubmit)="add(productForm.value)"  >
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" id="name" name="name" [(ngModel)]="pro.name" placeholder="Product Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="category"><i class="zmdi zmdi-lock"></i></label>
+                            <input type = "text" id = "categorylist" placeholder = "Select Category" list = "category" name="category" [(ngModel)]="pro.category"/>
+                            <datalist id = "category">
+                                <option value = "Seeds">
+                                <option value = "Bio Fertilizer">
+                                <option value = "INSECTICIDES">
+                                <option value = "LIVESTOCK PRODUCTS">
+                                <option value = "Fungicide">
+                            </datalist>
+                        </div>
+                        <div class="form-group">
+                            <label for="desc"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="text" name="description" id="desc" placeholder="Product Description" [(ngModel)]="pro.description"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="unit"><i class="zmdi zmdi-lock"></i></label>
+                            <input type = "text" id = "unitlist" placeholder = "Select Unit" list = "unit" name="unit" [(ngModel)]="pro.unit"/>
+                            <datalist id = "unit">
+                                <option value = "grams">
+                                <option value = "kg">
+                                <option value = "litre">
+                            </datalist>
+                        </div>
+                        <div class="form-group">
+                            <label for="price"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="number" name="price" id="price" placeholder="Product Price" [(ngModel)]="pro.price"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="number" name="quantity" id="quantity" placeholder="Product Quantity" [(ngModel)]="pro.quantity"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="image"><i class="zmdi zmdi-lock"></i></label>
+                            <input type = "text" id = "imagelist" placeholder = "Select Image path" list = "image" name="image" [(ngModel)]="pro.image"/>
+                            <datalist id = "image">
+                                <option value = "assets/image/agri pictures/seeds/Sahoo_large tomato seeds(1000 seeds).jpg">
+                                <option value = "assets/image/agri pictures/bio fertilizer/MULTIPLEX NALPAK BIO FERTILIZER.png">
+                                <option value = "assets/image/agri pictures/fungicide/LUNA EXPERIENCE FUNGICIDE.jpg">
+                                <option value = "assets/image/agri pictures/growth promoters/MULTIPLEX SAMRAS.png">
+                                <option value = "assets/image/agri pictures/insecticides/gd.png">
+                                <option value = "assets/image/agri pictures/livestock products/TAPAS SILAGE CULTURE FOR SILAGE MAKING.jpg">
+                            </datalist>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="addproduct" id="addproduct" class="form-submit" value="Add Product"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+    </div>
+  </section>
+
+
+</body>
+</html>

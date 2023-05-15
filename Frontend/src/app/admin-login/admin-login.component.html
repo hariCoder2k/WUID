@@ -1,0 +1,20 @@
+<div class="login-container">
+    <div>
+    <img src="assets/image/Logo.PNG" height= 100>
+    </div>
+    <!--  #loginForm="ngForm" (ngSubmit)="login(loginForm.value) -->
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+        <h1>Administration</h1>
+        <br>
+        <input type="text" id="utextbox" placeholder="Username" name="name" [(ngModel)]="user.name"/>
+        <br>
+        <!-- [(ngModel)]="user.name" -->
+        <input type="password" id="passwd-text-box" placeholder="Password" name="pass" [(ngModel)]="user.pass"/>
+        <br/>
+        <p *ngIf="check===true" style="color:red">{{statements}}</p>
+        <!-- [(ngModel)]="user.pass" -->
+        <input type="submit" class="button" value="Login">
+       
+    </form>
+
+</div>

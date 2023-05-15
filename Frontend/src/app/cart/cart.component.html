@@ -1,0 +1,61 @@
+<app-header></app-header>
+<ng-container *ngIf="product.length == 0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">
+                My Cart
+            </h5>
+        </div>
+    
+        
+        <div class="center">
+            <img  src="" alt="">
+            <h4>Your cart is empty</h4>
+            <h6>Add item to it new</h6>
+            <button class="btn btn-primary"  routerLink="/home">Shop Now</button>
+        </div>
+        
+    </div>
+    
+</ng-container>
+    
+<ng-container *ngIf="product.length != 0">
+ <div class="container">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>S.NO</th>
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>     
+                    <tr *ngFor="let item of product; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.price}}</td>
+                        <td>1</td>
+                        <td>{{item.price}}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="removeItem(item)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            <tr>
+                <td colspan="4"></td>
+                <td><button class="btn btn-danger" (click)="emptyCart()">Empty cart</button></td>
+                <td><button class="btn btn-primary" routerLink="/home">Shop More</button></td>
+                <td><button class="btn btn-success" (click)="makeOrder()">Check out</button></td>
+            </tr>
+            </table>
+        </div>
+    </div>
+ </div>
+</ng-container>

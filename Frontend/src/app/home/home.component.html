@@ -1,0 +1,127 @@
+<app-header></app-header>
+ <div class="container">
+    <h1>Seeds</h1>
+    <div class="row">
+        <ng-container *ngFor="let item of res ">
+                <div class="row1">
+                    <div class="card" style="width: 18rem;"  *ngIf="item.category == Seeds" >
+                        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h5>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.quantity}} {{item.unit}}</p> 
+                            <p><strong>Price:</strong> Rs.{{item.price}}</p>
+                            <input type="hidden" value="{{item._id}}"/>
+                            <button class="btn btn-primary" (click)="addtoCart(item)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+        </ng-container>
+        
+
+    </div>
+
+    <h1>INSECTICIDES</h1>
+    <div class="row">
+        <ng-container *ngFor="let item of res ">
+                <div class="row1">
+                    <div class="card" style="width: 18rem;"  *ngIf="item.category == insect" >
+                        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h5>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.quantity}} {{item.unit}}</p> 
+                            <p><strong>Price:</strong> Rs.{{item.price}}</p>
+                            <input type="hidden" value="{{item._id}}"/>
+                            <button class="btn btn-primary" (click)="addtoCart(item)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+        </ng-container>
+    </div>
+
+    <h1>Bio Fertilizer</h1>
+    <div class="row">
+        <ng-container *ngFor="let item of res ">
+                <div class="row1">
+                    <div class="card" style="width: 18rem;"  *ngIf="item.category == bio" >
+                        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h5>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.quantity}} {{item.unit}}</p> 
+                            <p><strong>Price:</strong> Rs.{{item.price}}</p>
+                            <input type="hidden" value="{{item._id}}"/>
+                            <button class="btn btn-primary" (click)="addtoCart(item)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+        </ng-container>
+        
+
+    </div>
+
+  
+
+    <h1>LIVESTOCK PRODUCTS</h1>
+    <div class="row">
+        <ng-container *ngFor="let item of res ">
+                <div class="row1">
+                    <div class="card" style="width: 18rem;"  *ngIf="item.category == live" >
+                        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h5>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.quantity}} {{item.unit}}</p> 
+                            <p><strong>Price:</strong> Rs.{{item.price}}</p>
+                            <input type="hidden" value="{{item._id}}"/>
+                            <button class="btn btn-primary" (click)="addtoCart(item)" >Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+        </ng-container>
+        
+
+    </div>
+
+    <h1>FUNGICIDE</h1>
+    <div class="row">
+        <ng-container *ngFor="let item of res ">
+                <div class="row1">
+                    <div class="card" style="width: 18rem;"  *ngIf="item.category == fung" >
+                        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h5>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.quantity}} {{item.unit}}</p> 
+                            <p><strong>Price:</strong> Rs.{{item.price}}</p>
+                            <input type="hidden" value="{{item._id}}"/>
+                            <button class="btn btn-primary" (click)="addtoCart(item)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+        </ng-container>
+        
+
+    </div>
+    <h1>GROWTH PROMOTERS</h1>
+    <div class="row">
+        <ng-container *ngFor="let item of res ">
+                <div class="row1">
+                    <div class="card" style="width: 18rem;"  *ngIf="item.category == grow" >
+                        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h5>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.quantity}} {{item.unit}}</p> 
+                            <p><strong>Price:</strong> Rs.{{item.price}}</p>
+                            <input type="hidden" value="{{item._id}}"/>
+                            <button class="btn btn-primary" (click)="addtoCart(item)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+        </ng-container>
+        
+
+    </div>
+</div> 

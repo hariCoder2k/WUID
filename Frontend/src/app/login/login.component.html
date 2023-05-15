@@ -1,0 +1,33 @@
+<header>
+            <div class="logo"><a href="#">FarmBuy</a></div>
+            <div class="heading">
+                <ul>
+                    <li><a href="#" class="under">HOME</a></li>
+                    <li><a href="#" class="under">PRODUCTS</a></li>
+                    <li><a href="#" class="under">CONTACT US</a></li>
+                    <li><a href="#" class="under">ABOUT US</a></li>
+                </ul>
+            </div>
+        </header>
+
+
+        <div class="login-container">
+            <div>
+            <img src="assets/image/Logo.PNG" height= 100>
+            </div>
+            <form  #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+                <h1>Log in to your Account</h1>
+                <br>
+                <input type="text" id="utextbox" placeholder="Username" name="name" [(ngModel)]="user.name"/>
+                <br>
+                <input type="password" id="passwd-text-box" placeholder="Password" name="pass" [(ngModel)]="user.pass"/>
+                <br/>
+                <input type="submit" class="button" value="Login">
+                <p *ngIf="check===true" style="color:red">{{statements}}</p>
+                <p>
+                    Not registered 
+                    <a routerLink="/sign">Create an account</a>
+                </p>
+                
+            </form>
+        </div>

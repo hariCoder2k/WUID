@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="container">
+
+<form #loginForm="ngForm" (ngSubmit)="pay(loginForm.value)">
+
+  <div class="row">
+
+      <div class="col">
+
+          <h3 class="title">payment</h3>
+            <div class="inputBox">
+                <span>full name on card :</span>
+                <input type="text" placeholder="john deo" name="name" required [(ngModel)]="payment.name">
+            </div>
+
+          <div class="inputBox">
+              <span>cards accepted :</span>
+              <img src="assets/image/card_img.png" alt="">
+          </div>
+          <div class="inputBox">
+              <span>credit card number :</span>
+              <input type="text" placeholder="1111-2222-3333-4444" name="cardno" [(ngModel)]="payment.cardno">
+          </div>
+          <div class="inputBox">
+              <span>exp date :</span>
+              <input type="date" placeholder="january" name="edate" [(ngModel)]="payment.edate">
+          </div>
+
+          <div class="flex">
+              <div class="inputBox">
+                  <span>CVV :</span>
+                  <input type="text" placeholder="1234" name="cvv" [(ngModel)]="payment.cvv">
+              </div>
+              <div class="inputBox">
+                <span>Amount:</span>
+                <p>{{grandTotal}}</p>
+            </div>
+
+          </div>
+          <p style="color:red">{{statements}}</p>
+      </div>
+
+  </div>
+
+  <input type="submit" value="proceed to checkout" class="submit-btn">
+
+</form>
+
+</div>    
